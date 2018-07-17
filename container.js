@@ -2,7 +2,9 @@ const dependable = require('dependable');
 const path = require('path');
 const container = dependable.container();
 const dependancies = [
-    ['_','lodash']
+    ['_','lodash'],
+    ['mongoose','mongoose'],
+    ['passport','passport']
 ];
 
 dependancies.forEach(function(val) {
@@ -11,7 +13,7 @@ dependancies.forEach(function(val) {
     })
 });
 
-container.load(path.join(__dirname,'/controller'));
+container.load(path.join(__dirname,'/controllers'));
 container.load(path.join(__dirname,'/helper'));
 
 container.register('container',function(){

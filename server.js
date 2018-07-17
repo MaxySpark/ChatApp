@@ -35,8 +35,11 @@ container.resolve(function(users){
 
 
     function configureExpress(app) {
+
+        require('./passport/passport-local');
+
         mongoose.Promise = global.Promise;
-        const mongoDB = 'mongodb://localhost:27017/chatapp';
+        const mongoDB = 'mongodb://127.0.0.1:27017/chatapp';
         mongoose.connect(mongoDB,{ useNewUrlParser: true });
         app.use(express.static('public'));
         app.use(cookieParser());
