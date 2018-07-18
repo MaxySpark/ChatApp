@@ -1,1 +1,66 @@
-<%= test %>
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Chat App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/login.css">
+
+</head>
+
+<body>
+
+    <div class="container logo-container">
+        <div class="row">
+            <div class="col-md-12">
+                    <nav class="navbar" id="nav_bar" role="navigation">
+
+                        <div class="navbar-header">
+                            
+                            <h1 class="logo-div">
+                                <a href="/">Chat App</a>
+                            </h1>
+                        </div>
+
+
+                    </nav>
+                </div>
+
+        </div>
+    </div>
+
+<div id="main">
+    <div class="main">
+        <form action="/login" method="post">
+
+            <h1>
+                Register
+            </h1>
+            
+            <div class="inset">
+                
+                <p>
+                    <label for="email">EMAIL ADDRESS</label>
+                    <input type="text" name="email" placeholder="" />
+                </p>
+                <p>
+                    <label for="password">PASSWORD</label>
+                    <input type="password" name="password" placeholder="" />
+                </p>
+
+            </div>
+
+            <p class="p-container">
+                <span><a href="/signup">Not Yest Registered?</a></span>
+                <input type="submit" class="login-log" style=" background: #3bb5ec; border: #3bb5ec;" value="Login">
+            </p>
+        </form>
+    </div>
+</div>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+</body>
+</html>
